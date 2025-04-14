@@ -1,0 +1,216 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #d64161;
+    color: white;
+    padding: 1.5em 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main {
+    background-color: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    flex-grow: 1;
+    margin: 20px;
+}
+
+#recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.recipe-card {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card img {
+    max-width: 100%;
+    max-height: 150px;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    object-fit: cover;
+}
+
+.recipe-card h3 {
+    margin-top: auto;
+    margin-bottom: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+#recipe-detail {
+    padding: 25px;
+}
+
+#recipe-detail h2 {
+    color: #d64161;
+    margin-bottom: 15px;
+    font-size: 1.8em;
+}
+
+#recipe-detail img {
+    max-width: 40%;
+    max-height: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+#recipe-detail h3 {
+    color: #777;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#recipe-detail ul, #recipe-detail ol {
+    list-style-position: inside;
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+
+#recipe-detail li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#recipe-detail li:last-child {
+    border-bottom: none;
+}
+
+#recipe-detail button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 30px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#recipe-detail button:hover {
+    background-color: #4cae4c;
+}
+
+footer {
+    background-color: #d64161;
+    color: white;
+    text-align: center;
+    padding: 1.5em 20px;
+    margin-top: 30px;
+}
+
+#add-recipe {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+#add-recipe h2 {
+    color: #d64161;
+    margin-bottom: 15px;
+}
+
+#add-recipe div {
+    margin-bottom: 15px;
+}
+
+#add-recipe label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#add-recipe input[type="text"],
+#add-recipe input[type="url"],
+#add-recipe textarea {
+    width: calc(100% - 12px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+#add-recipe textarea {
+    resize: vertical;
+}
+
+#add-recipe button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#add-recipe button:hover {
+    background-color: #0056b3;
+}
+
+#add-recipe button[type="button"]:last-child {
+    background-color: #6c757d;
+}
+
+#add-recipe button[type="button"]:last-child:hover {
+    background-color: #5a6268;
+}
+
+#add-recipe-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#add-recipe-button:hover {
+    background-color: #218838;
+}

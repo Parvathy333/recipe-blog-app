@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Blog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Awesome Recipe Blog</h1>
+    </header>
+    <main>
+        <button id="add-recipe-button" onclick="toggleAddRecipeForm()">Add New Recipe</button>
+        <div id="recipe-list">
+            </div>
+        <div id="recipe-detail" style="display: none;">
+            <button onclick="showRecipeList()">Back to Recipes</button>
+        </div>
+        <div id="add-recipe" style="display: none;">
+            <h2>Add a New Recipe</h2>
+            <form id="new-recipe-form">
+                <div>
+                    <label for="new-recipe-title">Title:</label>
+                    <input type="text" id="new-recipe-title" required>
+                </div>
+                <div>
+                    <label for="new-recipe-image">Image URL:</label>
+                    <input type="url" id="new-recipe-image">
+                </div>
+                <div>
+                    <label for="new-recipe-ingredients">Ingredients (one per line):</label>
+                    <textarea id="new-recipe-ingredients" rows="5" required></textarea>
+                </div>
+                <div>
+                    <label for="new-recipe-instructions">Instructions (one step per line):</label>
+                    <textarea id="new-recipe-instructions" rows="8" required></textarea>
+                </div>
+                <button type="button" onclick="addNewRecipe()">Add Recipe</button>
+                <button type="button" onclick="toggleAddRecipeForm()">Cancel</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Recipe Blog</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
